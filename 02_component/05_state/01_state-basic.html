@@ -51,7 +51,7 @@
                     state 객체를 직접 새로운 객체로 바꾸는 것이 아닌 state setter 메소드(setState)를
                     호출하고 관리할 값에 변화를 준 새로운 객체를 인수로 전달해야 한다.
                     
-                    2. state에 변화를 줫 render() 재호출
+                    2. state에 변화를 줘서 render() 재호출
                     setState()를 통해 state에 변화를 주면 자동으로 render()는 재 호출된다. (라이프 사이클)
                     그러면 render()가 변화하는 새로운 앨리먼트로 가상 dom에 갈아 끼우게되고 실제 dom tree와
                     차이나는 부분만 확인해서 화면에 차이나는 부분만 다시 그려주게 된다.
