@@ -21,6 +21,11 @@ import UseRefCounter from "./05_useRef/02_resolve-as-useRef";
 import LoginComponent from "./05_useRef/03_inputref";
 import Page2 from "./resume/2page";
 import UseMemoComponent from "./03_useMemo/03_performance-optimization";
+import Page from "./06_useContext/01_props-drilling";
+import ContextContainer from "./06_useContext/02_useContext";
+import CustomHooks from "./07_custom-hooks.js/02_custom-hooks";
+import HooksProblem from "./07_custom-hooks.js/01_problem";
+
 
 function App(){
   const [message, setMessage] = useState("안녕하세요~");
@@ -43,12 +48,16 @@ function App(){
       {/* <ComplexCalculator/> */}
       {/* <UseMemoComponent/> */}
       {/* <LocationComponent/> */}
-      <CallBackProblem/>
+      {/* <CallBackProblem/> */}
       {/* <FunctionMemorization/> */}
       {/* <CallBackComponent/> */}
       {/* <CounterRef/> */}
       {/* <UseRefCounter/> */}
       {/* <LoginComponent/> */}
+      {/* <Page/> */}
+      {/* <ContextContainer/> */}
+      {/* <HooksProblem/> */}
+      <CustomHooks/>
     </>
   );
 }
