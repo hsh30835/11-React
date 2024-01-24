@@ -1,16 +1,27 @@
 import { useState } from "react";
+
 const Page2 = () => {
-    // + 누를시 3씩 증가하고 -누를시 3씩 감소하는 버튼 만들기
-    // 버튼을 누를시 변경 되는 것이니 onChange로 setNumber를 써야되나?
-    // 아니였음 onChange는 input같이 입력하는거에 쓰는거고 button은 onClick이였음
-    const[number,setNumber]=useState(0);
-    return(
+    const [number, setNumber] = useState(0);
+
+    // + 누를 시 3씩 증가하고 - 누를 시 3씩 감소하는 버튼 만들기
+    // onChange로 number를 setNumber로 바꿔야 하나?
+    // onChange는 input같이 입력할때 값이 바뀔 때 쓰는거였음 button은 onClick
+    // plus const로 setNumber에 number+3해줌
+    const plus = () => {
+        setNumber(number + 3);
+    };
+
+    const minus = () => {
+        setNumber(number - 3);
+    };
+
+    return (
         <>
-            <h3>number : {number}</h3>
-          <button onClick={number = () => (setNumber+3)}>+</button>
-          <button>-</button>  
+            <h3>number: {number}</h3>
+            <button onClick={plus}>+</button>
+            <button onClick={minus}>-</button>
         </>
-    )
-}
+    );
+};
 
 export default Page2;

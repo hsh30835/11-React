@@ -1,3 +1,6 @@
+import { NavLink } from "react-router-dom"
+import Layouts from "../layoutss/Layouts"
+
 const NavBarr = () => {
     const activeStyle={
         color:"red"

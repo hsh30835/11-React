@@ -1,0 +1,13 @@
+.kalingMainpage {
+    display: flex;
+    margin-top: 3%;
+    margin-left: 2%;
+    font-size: 30px;
+  }
+
+.kaling{
+    width: 300px;
+    height: auto;
+    margin-right: 50px;
+}
+

@@ -1,0 +1,17 @@
+[
+    {
+        "bossCode" : 1,
+        "bossName" : "혼돈",
+        "bossHp" : "96조"
+    },
+    {
+        "bossCode" : 2,
+        "bossName" : "궁기",
+        "bossHp" : "96조"
+    },
+    {
+        "bossCode" : 3,
+        "bossName" : "도올",
+        "bossHp" : "96조"
+    }
+]
