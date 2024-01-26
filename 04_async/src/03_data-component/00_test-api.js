@@ -90,6 +90,7 @@ const TestApi = () => {
             });
     };
 
+
     const onChangeHandler = (e) => {
         setNumber(e.target.value)
 
@@ -113,7 +114,6 @@ const TestApi = () => {
             <h3>포켓몬 무게 : {weight}g</h3>
             <h3>첫 번째 포켓몬 타입 : {firsttype}</h3>
             <h3>두 번째 포켓몬 타입 : {secondtype}</h3>
-            
         </>
     )
 }
