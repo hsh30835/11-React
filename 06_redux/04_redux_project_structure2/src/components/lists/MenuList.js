@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux"
-import { callGetMenuListAPI } from "../../apis/MenuAPIUCalls";
+import { callGetMenuListAPI } from "../../apis/MenuAPICalls";
+import MenuItem from "../items/MenuItem";
 
 const MenuList = () => {
     const result = useSelector(state => state.menuReducer);
@@ -9,14 +10,14 @@ const MenuList = () => {
 
     console.log(menuList);
 
-    useEffect(()=>{
+    useEffect(() => {
         dispatch(callGetMenuListAPI());
-    },[])
+    }, [])
 
-    return(
+    return (
         menuList && (
             <div className="menuBox">
-                {menuList.map(menu => <MenuItem key={menu.id} menu={menu}/>)}
+                {menuList.map(menu => <MenuItem key={menu.id} menu={menu} />)}
             </div>
         )
     )

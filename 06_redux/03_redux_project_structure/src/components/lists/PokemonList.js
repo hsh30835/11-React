@@ -12,6 +12,7 @@ const PokemonList = () => {
     const pokemons = result.results;
     console.log("d", result.results);
     console.log("pokemons result : " + pokemons);
+    // 빈 객체?를 받아와서 undefined가 나옴
 
     const dispatch = useDispatch();
 
