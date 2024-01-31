@@ -8,8 +8,8 @@ import Quiz from "./01_useEffect/quiz";
 import Counter from "./02_useReducer/01_reducer-basic";
 import UseReducerBasic from "./02_useReducer/01_reducer-basic";
 import ReducerFormControl from "./02_useReducer/02_reducer-form-control";
-import Page1 from "./resume/1page";
-import Page3 from "./resume/3page";
+import Page1 from "./resume/page/1page";
+import Page3 from "./resume/page/3page";
 import HardCalculator from "./03_useMemo/01_hard-calculator";
 import ComplexCalculator from "./03_useMemo/02_complex-calculator";
 import LocationComponent from "./03_useMemo/04_object-type-problem";
@@ -19,7 +19,7 @@ import CallBackComponent from "./04_useCallBack/03_componsited-componenet";
 import CounterRef from "./05_useRef/01_problem";
 import UseRefCounter from "./05_useRef/02_resolve-as-useRef";
 import LoginComponent from "./05_useRef/03_inputref";
-import Page2 from "./resume/2page";
+import Page2 from "./resume/page/2page";
 import UseMemoComponent from "./03_useMemo/03_performance-optimization";
 import Page from "./06_useContext/01_props-drilling";
 import ContextContainer from "./06_useContext/02_useContext";
@@ -41,7 +41,7 @@ function App(){
       {/* <Counter/> */}
       {/* <UseReducerBasic/> */}
       {/* <ReducerFormControl/> */}
-      {/* <Page1/> */}
+      <Page1/>
       {/* <Page2/> */}
       {/* <Page3/> */}
       {/* <HardCalculator/> */}
@@ -57,7 +57,7 @@ function App(){
       {/* <Page/> */}
       {/* <ContextContainer/> */}
       {/* <HooksProblem/> */}
-      <CustomHooks/>
+      {/* <CustomHooks/> */}
     </>
   );
 }
