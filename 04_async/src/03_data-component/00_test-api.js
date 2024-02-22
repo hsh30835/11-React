@@ -76,6 +76,7 @@ const TestApi = () => {
             .then(response => response.json())
             .then(data => {
                 console.log(data.types);
+                console.log(data);
                 console.log("=========");
     
                 if (data.types[1] && data.types[1].type.name != null) {

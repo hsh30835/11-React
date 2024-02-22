@@ -1,3 +1,4 @@
+import FoodApi from "./03_data-component/00_food-api-test";
 import TestApi from "./03_data-component/00_test-api";
 import Container from "./03_data-component/01_rendering-component";
 import Weather from "./03_data-component/02_weather-promise";
@@ -15,7 +16,8 @@ function App() {
       {/* <Container/> */}
       {/* <Weather/> */}
       {/* <WeatherContainer/> */}
-      <TestApi/>
+      {/* <TestApi/> */}
+      <FoodApi/>
     </>
   );
 }
