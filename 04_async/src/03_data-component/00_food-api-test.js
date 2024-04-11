@@ -4,7 +4,7 @@
 //     const [name, setName] = useState('');
 //     const [groupName, setGroupName] = useState('');
 
-    
+
 //     const findGroupName = () => { // api에서 검색하기
 //         fetch(`http://openapi.foodsafetykorea.go.kr/api/0e28c65abe314f1c9981/I2790/json/1/50/DESC_KOR=${name}`)
 //             .then(response => response.json())
@@ -24,7 +24,7 @@
 //                     // replace : 특정 문자열을 제거해줌 ,을 제거함
 //                     setName(name.replace(/,$/, ''))
 //                 }
-                
+
 //                 setGroupName(groupNames);
 //             });
 //     };
@@ -56,43 +56,207 @@
 
 // export default FoodApi;
 
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
+
+// const FoodApi = () => {
+//     const [name, setName] = useState('');
+//     const [groupName, setGroupName] = useState('');
+
+//     const findGroupName = () => {
+
+//         fetch(`http://openapi.foodsafetykorea.go.kr/api/0e28c65abe314f1c9981/I2790/json/1/5/DESC_KOR=${name}`)
+//             .then(response => response.json())
+//             .then(data => {
+//                 console.log(data);
+//                 console.log("============");
+
+//                 const groupNames = [];
+
+//                 if (data && data.I2790 && data.I2790.row && data.I2790.row.length > 0) {
+//                     for (let i = 0; i < data.I2790.row.length; i++) {
+//                         groupNames.push(data.I2790.row[i].DESC_KOR);
+//                     }
+//                 } else {
+//                     setName(name.replace(/,$/, ''))
+//                 }
+
+//                 setGroupName(groupNames);
+//             });
+//     };
+
+//     useEffect(() => {
+//         console.log(name);
+//         setName(name);
+//     }, [name]);
+
+//     const onChangeHandler = (e) => {
+//         setName(e.target.value + ",");
+//     };
+
+//     return (
+//         <>
+//             <label>종류 확인</label>
+//             <input type="text" onChange={onChangeHandler} />
+//             <button onClick={findGroupName}>검색</button>
+//             <h3>{name}</h3>
+//             <h3>{groupName}</h3>
+//             <h3>이름 검색 시 리스트 목록 출력하고 리스트 클릭시 칼로리 탄수화물 단백질 지방 출력</h3>
+//             <h3>기본은 ,붙인 상태로 검색하고 만약 값이 없으면 ,를 지워진채로 검색해서 결과가 나오게끔
+//                 결과 if
+//             </h3>
+//         </>
+//     );
+// };
+
+// export default FoodApi;
+
+// import React, { useState } from "react";
+
+// const FoodApi = () => {
+//     const [name, setName] = useState('');
+//     const [groupNames, setGroupNames] = useState([]);
+
+//     const findGroupName = () => {
+
+//         fetch(`http://openapi.foodsafetykorea.go.kr/api/0e28c65abe314f1c9981/I2790/json/1/50/DESC_KOR=${name}`)
+//             .then(response => response.json())
+//             .then(data => {
+//                 console.log(data);
+//                 console.log("====== 구분선 ======");
+
+//                 if (data && data.I2790 && data.I2790.row && data.I2790.row.length > 0) {
+//                     const names = data.I2790.row.map(item => item.DESC_KOR);
+//                     setGroupNames(names);
+//                 } else {
+//                     const updatedName = name.slice(0, -1); // 변경된 이름
+//                     console.log("이름 바뀜? " + updatedName)
+//                     fetch(`http://openapi.foodsafetykorea.go.kr/api/0e28c65abe314f1c9981/I2790/json/1/50/DESC_KOR=${updatedName}`)
+//                         .then(response => response.json())
+//                         .then(data => {
+//                             console.log(data);
+//                             console.log("@@@@@@@@@@@@@@@@@2");
+
+//                             if (data && data.I2790 && data.I2790.row && data.I2790.row.length > 0) {
+//                                 const items = data.I2790.row;
+//                                 items.forEach(item => {
+//                                     console.log(item.DESC_KOR);
+//                                 }); // 이 부분에 세미콜론을 추가해야 합니다.
+//                             }
+//                         });
+//                 }
+//             });
+//     };
+
+//     // useEffect(() => {
+//     //     // console.log()
+//     //     // console.log(name);
+//     //     setName(name);
+//     // }, [name]);
+
+//     const onChangeHandler = (e) => {
+//         setName(e.target.value + ",");
+//     };
+
+//     return (
+//         <>
+//             <label>종류 확인</label>
+//             <input type="text" onChange={onChangeHandler} />
+//             <button onClick={findGroupName}>검색</button>
+//             <h3>{name}</h3>
+//             {groupNames.length > 0 ? (
+//                 <ul>
+//                     {groupNames.map((groupName, index) => (
+//                         <li key={index}>{groupName}</li>
+//                     ))}
+//                 </ul>
+//             ) : null}
+//             <h3>이름 검색 시 리스트 목록 출력하고 리스트 클릭시 칼로리 탄수화물 단백질 지방 출력</h3>
+//             <h3>기본은 ,붙인 상태로 검색하고 만약 값이 없으면 ,를 지워진채로 검색해서 결과가 나오게끔
+//                 결과 if
+//             </h3>
+//         </>
+//     );
+// };
+
+// export default FoodApi;
+
+// import React, { useState } from "react";
+
+// const FoodApi = () => {
+//     const [name, setName] = useState('');
+//     const [groupNames, setGroupNames] = useState([]);
+
+//     const findGroupName = () => {
+//         fetch(`http://openapi.foodsafetykorea.go.kr/api/0e28c65abe314f1c9981/I2790/json/1/50/DESC_KOR=${name}`)
+//             .then(response => response.json())
+//             .then(data => {
+//                 if (data && data.I2790 && data.I2790.row && data.I2790.row.length > 0) {
+//                     const names = data.I2790.row.map(item => item.DESC_KOR);
+//                     setGroupNames(names);
+//                 } else {
+//                     const updatedName = name.slice(0, -1); // 변경된 이름
+//                     fetch(`http://openapi.foodsafetykorea.go.kr/api/0e28c65abe314f1c9981/I2790/json/1/50/DESC_KOR=${updatedName}`)
+//                         .then(response => response.json())
+//                         .then(data => {
+//                             if (data && data.I2790 && data.I2790.row && data.I2790.row.length > 0) {
+//                                 const items = data.I2790.row;
+//                                 const names = items.map(item => item.DESC_KOR);
+//                                 setGroupNames(names);
+//                             }
+//                         });
+//                 }
+//             });
+//     };
+    
+//     const onChangeHandler = (e) => {
+//         setName(e.target.value + ",");
+//     };
+
+//     return (
+//         <>
+//             <label>종류 확인</label>
+//             <input type="text" onChange={onChangeHandler} />
+//             <button onClick={findGroupName}>검색</button>
+//             <h3>{name}</h3>
+//             {groupNames.length > 0 ? (
+//                 <ul>
+//                     {groupNames.map((groupName, index) => (
+//                         <li key={index}>{groupName}</li>
+//                     ))}
+//                 </ul>
+//             ) : null}
+//         </>
+//     );
+// };
+
+// export default FoodApi;
+
+import React, { useState } from "react";
 
 const FoodApi = () => {
     const [name, setName] = useState('');
-    const [groupName, setGroupName] = useState('');
+    const [groupNames, setGroupNames] = useState([]);
 
     const findGroupName = () => {
-        // 이름이 콤마로 끝나지 않도록 처리
-        // const trimmedName = name.replace(/,$/, ''); 
+        fetchAndSetGroupNames(name);
+    };
 
-        fetch(`http://openapi.foodsafetykorea.go.kr/api/0e28c65abe314f1c9981/I2790/json/1/50/DESC_KOR=${name}`)
+    const fetchAndSetGroupNames = (searchName) => {
+        fetch(`http://openapi.foodsafetykorea.go.kr/api/0e28c65abe314f1c9981/I2790/json/1/5/DESC_KOR=${searchName}`)
             .then(response => response.json())
             .then(data => {
-                console.log(data);
-                console.log("============");
-
-                const groupNames = [];
-
                 if (data && data.I2790 && data.I2790.row && data.I2790.row.length > 0) {
-                    for (let i = 0; i < data.I2790.row.length; i++) {
-                        groupNames.push(data.I2790.row[i].DESC_KOR);
-                    }
+                    const names = data.I2790.row.map(item => item.DESC_KOR);
+                    setGroupNames(names);
                 } else {
-                    // 이름을 잘라내어 재요청
-                    setName(name.replace(/,$/, ''))
-                    // setName(trimmedName);
+                    if (searchName.endsWith(',')) {
+                        const updatedName = searchName.slice(0, -1); // 변경된 이름
+                        fetchAndSetGroupNames(updatedName);
+                    }
                 }
-                
-                setGroupName(groupNames);
             });
     };
     
-    useEffect(() => {
-        console.log(name);
-        setName(name);
-    }, [name]);
-
     const onChangeHandler = (e) => {
         setName(e.target.value + ",");
     };
@@ -103,11 +267,13 @@ const FoodApi = () => {
             <input type="text" onChange={onChangeHandler} />
             <button onClick={findGroupName}>검색</button>
             <h3>{name}</h3>
-            <h3>{groupName}</h3>
-            <h3>이름 검색 시 리스트 목록 출력하고 리스트 클릭시 칼로리 탄수화물 단백질 지방 출력</h3>
-            <h3>기본은 ,붙인 상태로 검색하고 만약 값이 없으면 ,를 지워진채로 검색해서 결과가 나오게끔
-                결과 if
-            </h3>
+            {groupNames.length > 0 ? (
+                <ul>
+                    {groupNames.map((groupName, index) => (
+                        <li key={index}>{groupName}</li>
+                    ))}
+                </ul>
+            ) : null}
         </>
     );
 };

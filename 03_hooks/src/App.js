@@ -41,12 +41,12 @@ function App(){
       {/* <Counter/> */}
       {/* <UseReducerBasic/> */}
       {/* <ReducerFormControl/> */}
-      <Page1/>
+      {/* <Page1/> */}
       {/* <Page2/> */}
       {/* <Page3/> */}
       {/* <HardCalculator/> */}
       {/* <ComplexCalculator/> */}
-      {/* <UseMemoComponent/> */}
+      <UseMemoComponent/>
       {/* <LocationComponent/> */}
       {/* <CallBackProblem/> */}
       {/* <FunctionMemorization/> */}

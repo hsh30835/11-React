@@ -3,6 +3,8 @@ import itemStyle from "./MenuItem.module.css"
 
 
 const MenuItem = ({menu}) => {
+    console.log("===================")
+    console.log("뭐받음?? : " + menu.menuName)
     return (
         <Link to={`/menu/${menu.menuCode}`}> {/* pathVariable.. */}
             <div className={itemStyle.MenuItem}>

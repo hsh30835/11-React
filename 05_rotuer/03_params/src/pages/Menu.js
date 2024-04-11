@@ -13,6 +13,7 @@ const Menu = () => {
     useEffect(
         () => {
             setMenuList(getMenuList());
+            console.log("뭐받음??? : " + getMenuList());
         },[]
     );
 
